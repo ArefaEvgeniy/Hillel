@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def partition(seq, start_index, end_index):
     pivot = start_index
 
@@ -22,5 +25,8 @@ def quick_sort(seq, start_index, end_index):
 
 seq = [50, 3, 6, -10, 345, 234, 5, 67, -113, 23, 456, 2, 9, 8, 55]
 print('before sort:', seq)
+now = datetime.now()
 quick_sort(seq, 0, len(seq)-1)
+print('Time: ', datetime.now() - now)
+print('Time: ', datetime.now())
 print('after sort:', seq)
