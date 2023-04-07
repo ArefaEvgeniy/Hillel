@@ -7,7 +7,7 @@
 #
 # Затем в цикле выводится это сообщение и цикл начинается заново ожидая следующего
 # ввода. Функция на вход принимает строку из ввода из вечного цикла. Анализирует
-# её исключительно методом .isdigit() и другими методами строк, без доп.библиотек 
+# её исключительно методом .isdigit() и другими методами строк, без доп.библиотек
 # и переводит строку в число, если это возможно.
 #
 # Функция умеет распознавать отрицательные числа и десятичные дроби, а так же
@@ -28,33 +28,23 @@
 # --.49 → Вы ввели не корректное число: --.49
 
 
-def str_to_num(num):
-    result = f'вы ввели неверное число {num}'
-
-    if num.isdigit():
-        if int(num) > 0:
-            result = f'вы ввели положительное целое число {int(num)}'
-        else:
-            result = f'вы ввели ноль'
-
-    elif num[0] == '-' and len(num) > 1 and num[1:].isdigit():
-        result = f'вы ввели отрицательное целое число {int(num)}'
-
-    elif num.replace('.', '', 1).replace('-', '', 1).isdigit()\
-            and num.find('-') in (-1, 0):
-        if float(num) > 0:
-            result = f'вы ввели положительное дробное число {float(num)}'
-        elif float(num) < 0:
-            result = f'вы ввели отрицательное дробное число {float(num)}'
-
-    return result
+def func(val):
+    ret = "Вы ввели "
+    val = val.replace(",", ".")
+    if not val.replace("-", "", 1).replace(".", "", 1).strip().isdigit():
+        ret += "не корректное число: " + val
+    elif val.strip() == "0":
+        ret += "ноль"
+    else:
+        ret += "отрицательное " if "-" in val else "положительное "
+        ret += "целое число: " if "." not in val else "дробное число: "
+        ret += val
+    return ret
 
 
 while True:
-    input_str = input('введите число: ').replace(',', '.')
-    if input_str.lower() in ('выход', 'exit', 'quit', 'e', 'q', 'в'):
+    e = input("Введите число либо значение для выхода: ").lower()
+    if e == "выход" or e == "exit" or e == "quit" or e == "e" or e == "q":
         break
-    elif input_str:
-        print(str_to_num(input_str))
     else:
-        print('Вы ничего не ввели, попробуйте ещё раз')
+        print(func(e))
