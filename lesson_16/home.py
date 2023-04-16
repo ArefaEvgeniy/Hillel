@@ -2,7 +2,10 @@
 
 
 def simple_generator(start, step):
-    ...
+    val = start
+    while True:
+        yield val
+        val *= step
 
 
 for item in simple_generator(-2, -5):
