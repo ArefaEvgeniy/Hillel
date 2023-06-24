@@ -1,7 +1,15 @@
-name = input("Enter your name: ")
-print("Hello,", name, 'world', 'Sun')
+#!/usr/bin/env python3
 
-a = 5
-b = 'Text'
+age = 5
+color = 'red'
+is_maried = True
 
-c= 33
+print(age)
+print(color)
+print(is_maried)
+
+a = 5 + 1
+print(a)
+
+a = 'women'
+print(a)

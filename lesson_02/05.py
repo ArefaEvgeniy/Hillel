@@ -1,12 +1,31 @@
-s = {1, 2, 3, 4, 5}
-s_2 = {1}
+a = [12, 0.55, "dsjhgd sf g", -78, 'RRR', None]
+print(a)
+print(id(a))
+print(type(a))
 
-print(type(s))
-print(len(s) == len(s_2))
-print(1 in s)
+a.append('p')
+print(a)
+print(id(a))
 
-a = [1, 2, 45, 3, 1, 1, 3, 2, 1, 1, 3, 45, 6, 3]
-b = list(set(a))
-print(b)
-print(set(a))
-print(type(b))
+print(a[-1])
+a.insert(1, 'RRR')
+print(a)
+print(id(a))
+
+s = [1, 2, 3, [0, 99, (33, 56), 88], 97]
+print(len(s))
+print(s[3][2][0])
+
+a.remove('RRR')
+print(a)
+
+del a[1]
+print(a[1])
+print(a)
+
+a[1] = True
+print(a)
+
+n = a.pop(3)
+print(a)
+print(n)

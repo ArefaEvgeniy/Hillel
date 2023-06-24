@@ -1,15 +1,32 @@
-a = [1, 2, '33', [45, 657, ['a', 'b']], 'rrg']
+age = 17
+print(age)
+print(type(age))
 
-print('3' in a)
-print(len(a))
-print(a[:-1])
-print(a[0])
-print(a[-2])
+age = age + 4
+print(age)
 
-b = list()
-print(b)
-print(type(b))
+age += 4
+print(age)
 
-print('-' * 50)
+age -= 10
+print(age)
 
-print(a[3][2][1])
+age /= 3
+print(age)
+print(type(age))
+
+age = str(age)
+print(age)
+print(type(age))
+
+print(age + '!!!')
+
+string_1 = 'asd sdf sdg mnk sndkj ds bjk \ns bjk sd dg'
+string_2 = r'asd sdf sdg mnk sndkj ds bjk \ns bjk sd dg'
+
+print(string_1)
+
+print(len(string_1))
+print(len(string_2))
+
+print(r'asd sdf sdg mnk sndkj ds bjk \ns bjk sd dg' in string_2)

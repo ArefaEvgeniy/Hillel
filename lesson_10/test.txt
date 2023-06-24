@@ -1,6 +1,0 @@
-Line 1
-line_2
-LINE 3
-LiNe 4
-Loine 5
-LINE END

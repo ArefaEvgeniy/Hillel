@@ -1,17 +1,15 @@
-text_1 = 'Здесь "кавычки" \tооиролыва \nллвыил  выпыьмоол \nжждыв д дл уца'
-text_2 = "Здесь 'апострофы'"
-text_3 = "Здесь 'апострофы' и \"кавычки\""
+a = 'heLlo$%^$ djjs  mkjn   dsf drt6'
+b = '324.55'
+c = 23455
 
-text_4 = """Здесь 'апострофы' и "кавычки" и 
-любой текст дальше  
-dfmkj  lhkdsf 
-sdgjfdfgd   dsg df gdf ds
-"""
+print(a.replace('L', ' '))
 
+print(len(a))
+print(b.isdigit())
+print(b.isalpha())
 
-print(text_1)
-print(text_2)
-print(text_3)
-print(text_4)
+print(type(b))
+print(type(c))
 
-print(text_1 == text_2)
+print('-' * 50)
+print(a[::-1])

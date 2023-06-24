@@ -1,15 +1,16 @@
-a = ('s', 1, 5, [12, 4, 5, ('a', 'b')])
-print(type(a))
+a = (12, 0.55, "dsjhgd sf g", -78)
+c = 'Dog'
+
 print(len(a))
-print(a)
+print(a[:-1])
 
-print(a[3][3][1])
-
-b = tuple([1, 2, 3, 45])
-print(type(b))
-print(len(b))
+b = (c,)
 print(b)
+print(type(b))
 
-print(12 in a)
-print(12 in a[3])
-print('b' in a[3])
+b_2 = tuple((1, 2, 3))
+print(b_2)
+print(type(b_2))
+
+print(id(a))
+print(-78 in a)

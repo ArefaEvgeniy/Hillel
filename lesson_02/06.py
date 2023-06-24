@@ -1,9 +1,24 @@
-d = {1: 'a', 'b': [1, 2, 3, {'ss': 'we', 'g': 'tty'}], 'c': 1111}
+# Создать два списка произвольного содержания.
+# Добавить к каждому списку по одному элементу в конец и в начало.
+# Расширить первый список вторым.
+# Все изменения выводить на экран.
 
-print(d['b'][3]['g'])
 
-print(list(d.values()))
-print(list(d.keys()))
-print(list(d.items()))
+a = [1, 2, 3]
+b = ['a', 'b', 'c']
 
-print(d.get(0, 'default value'))
+print(a)
+print(b)
+
+a.append(4)
+a.insert(0, 0)
+b.append('d')
+b.insert(0, 'z')
+
+print(a)
+print(b)
+
+print(len(a))
+a.extend(b)
+print(len(a))
+print(a)

@@ -1,8 +1,7 @@
-a = (1, 2, 3)
-b = ['a', 'b', 'c']
+s = {1, 2, 'ff', 'ss', (4, 67, 99, 10), None, False, 2, 1, None, None, 1, 2, 2, 2}
 
-c = {1: 2, 3: 'rrr'}
-c.update({a: b})
-c.update({1: 909})
+print(s)
 
-print(c)
+a = [1, 3, 5, 55, 2, 1, 55, 3, 55, 1, 0, 99, 1, 2]
+a_1 = list(set(a))
+print(a_1)

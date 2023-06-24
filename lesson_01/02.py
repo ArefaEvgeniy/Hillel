@@ -1,11 +1,11 @@
-a = True
-b = False
+age = -5
+print(age)
+print(type(age))
 
-print(a)
-print(type(a))
-
-c = None
-d = ''
+c = -45.3445
+print(c)
 print(type(c))
-print(type(d))
 
+print('%.10f' % 5.4)
+print('%.20f' % 5.4)
+print('%.50f' % 5.12)
