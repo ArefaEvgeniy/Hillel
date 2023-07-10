@@ -1,0 +1,65 @@
+# Написать программу для поиска в списке определённого слова
+# При этом список может состоять из разного типа данных
+# и иметь не ограниченное число вложенных друг в друга списков или кортежей
+# поиск произвести по всем списка и кортежам, в том числе и вложенным
+
+INPUT_LIST = [
+    1,
+    '2',
+    'cat',
+    99,
+    'dog',
+    (
+        4,
+        44,
+        [
+            'red',
+            'green',
+            ('mother', 'father',)
+        ]
+    ),
+    [
+        'one',
+        'two',
+        '55',
+        {1, 4, 'big', True},
+        ['milk', 0, 'bred']
+    ],
+    'End'
+]
+
+
+def find_word(word, input_list):
+    result = False
+
+    for item in input_list:
+        if isinstance(item, (str, int)) and str(item) == word:
+            result = True
+            break
+        elif isinstance(item, (tuple, list, set)):
+            result = find_word(word, item)
+            if result:
+                break
+
+    return result
+
+
+def main():
+    while True:
+        input_word = input('Enter a word: ')
+
+        if not input_word:
+            print('Try again')
+            continue
+
+        if find_word(input_word, INPUT_LIST):
+            print('Your word found')
+        else:
+            print('Your word did not find')
+
+        print('Exit? (Y/N)')
+        if input().upper() == 'Y':
+            break
+
+
+main()
