@@ -1,14 +1,20 @@
-text_1 = "Black 'red' yellow"
-text_2 = 'Black "red" \'dod\' yellow'
-text_3 = """Black "red" 'dod' yellow
-dsfsf
-ddddwe sdf sef  s 
+# bool
 
-sdfdstgre
-sdfgfd asf k ssg
-"""
+a = True
+b = False
+c = -33.4456
 
-print(text_1)
-print(text_2)
-print(text_1 == text_2)
-print(text_3)
+print(type(a))
+print(type(123))
+print(type(c))
+
+print(int(c))
+
+print(bool(c))
+print(bool(0))
+
+print(int(a))
+print(int(b))
+
+print(float(a))
+print(float(b))

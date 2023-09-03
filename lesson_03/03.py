@@ -1,24 +1,13 @@
-import copy
+a = [1, 2, 3]
+first_copy = a
+second_copy = a
 
-first = [1, 2, 'f']
-second = first[:]
-third = copy.copy(first)
-print(first)
-print(id(first))
-print(second)
-print(id(second))
-print(third)
-print(id(third))
+print(id(a))
+print(id(first_copy))
+print(id(second_copy))
 
-print(second == first)
-print(second is first)
-
-print('-' * 50)
-second.append(5)
-third.append(15)
-print(first)
-print(id(first))
-print(second)
-print(id(second))
-print(third)
-print(id(third))
+first_copy.append(9)
+second_copy.pop(1)
+print(a)
+print(first_copy)
+print(second_copy)

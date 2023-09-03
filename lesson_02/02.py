@@ -1,32 +1,14 @@
-age = 17
-print(age)
-print(type(age))
+a = (1, 3, '445', 'eef', 345.7, 0, 99, True, None, (1, 2, ('aaa', 'Hello, world!')))
 
-age = age + 4
-print(age)
+a_1 = ()
+a_2 = tuple('Hello')
 
-age += 4
-print(age)
+print(type(a))
 
-age -= 10
-print(age)
+print(345.7 in a)
+print(len(a))
 
-age /= 3
-print(age)
-print(type(age))
+print(a[-1][-1][-1][::2])
 
-age = str(age)
-print(age)
-print(type(age))
-
-print(age + '!!!')
-
-string_1 = 'asd sdf sdg mnk sndkj ds bjk \ns bjk sd dg'
-string_2 = r'asd sdf sdg mnk sndkj ds bjk \ns bjk sd dg'
-
-print(string_1)
-
-print(len(string_1))
-print(len(string_2))
-
-print(r'asd sdf sdg mnk sndkj ds bjk \ns bjk sd dg' in string_2)
+print(a_2)
+print(type(a_2))

@@ -1,31 +1,11 @@
-a = [12, 0.55, "dsjhgd sf g", -78, 'RRR', None]
-print(a)
-print(id(a))
-print(type(a))
+a = {1: 'aa', 2: 'tt', 'r': 33, 3: 33}
 
-a.append('p')
-print(a)
-print(id(a))
+print(len(a))
 
-print(a[-1])
-a.insert(1, 'RRR')
-print(a)
-print(id(a))
+print(a[2])
+print(a['r'])
+print(a.get('rrr', 'Не має'))
 
-s = [1, 2, 3, [0, 99, (33, 56), 88], 97]
-print(len(s))
-print(s[3][2][0])
-
-a.remove('RRR')
-print(a)
-
-del a[1]
-print(a[1])
-print(a)
-
-a[1] = True
-print(a)
-
-n = a.pop(3)
-print(a)
-print(n)
+print(tuple(a.keys()))
+print(tuple(a.values()))
+print(list(a.items()))

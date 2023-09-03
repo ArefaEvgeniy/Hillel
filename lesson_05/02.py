@@ -1,12 +1,13 @@
-a = 0
+lst = [1, 3, 55, 0, 99, 566, 45]
 
-while a > 0:
-    a -= 1
-    if a % 2 == 0:
-        print(f'a: {a}')
-    else:
+target = 33
+
+index = 0
+while index < len(lst):
+    if lst[index] == target:
         break
-    print('Go')
+    index += 1
 else:
-    print('ELSE')
+    index = -1
 
+print(f'index: {index}')

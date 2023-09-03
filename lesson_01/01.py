@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 
+name = input("Enter your name: ")
+
 age = 5
-color = 'red'
-is_maried = True
 
-print(age)
-print(color)
-print(is_maried)
+best_price = 1.44
 
-a = 5 + 1
-print(a)
+print("Hello,", name)
 
-a = 'women'
-print(a)
+name = 33
+
+print('New name:', name)

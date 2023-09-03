@@ -1,16 +1,26 @@
-# Дан список словарей.
-# Каждый словарь описывает машину(серийный номер и год выпуска).
-# Создать новый список со всеми машинами, год выпуска которых больше 2006.
+a = []
+for i in range(1, 15):
+    a.append(i ** 2)
 
-BASE_CAR = [
-    {'number': 'AE12232', 'year': 2020},
-    {'number': 'AE11111', 'year': 2010},
-    {'number': 'AE33333', 'year': 2022},
-    {'number': 'BC88974', 'year': 1999},
-    {'number': 'AE55555', 'year': 2001},
-    {'number': 'AE15552', 'year': 2006}
-]
+print(a)
 
-new_list = [{i['number']: i['year']} for i in BASE_CAR if i['year'] > 2006]
 
-print(new_list)
+print([i ** 2 for i in range(1, 15)])
+
+a = {6: 10, 2: 20, 3: 30}
+
+b = (i * a[i] for i in a)
+print(tuple(b))
+
+
+f = [1, 3, '55', '666', 0]
+
+for i in range(len(f)):
+    print(i)
+
+z = 'dfjk56nflk33fvm,lfv5p0097vktl66e'
+
+# g = [int(i) for i in z if '0' <= i <= '9']
+g = [int(i) for i in z if i.isdigit()]
+
+print(g)

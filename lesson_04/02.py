@@ -1,22 +1,16 @@
-ss = "Меня зовут {}, мне {} года. {} красивое имя."
-ss_1 = "Меня зовут {0}, мне {1} года. {0} красивое имя."
-ss_2 = "Меня зовут {name}, мне {age} года. {name} красивое имя."
+template_1 = "Мене звати {}. Мені {} роки. {} класно ім'я"
+template_2 = "Мене звати {name_2}. Мені {age_3} роки. {name_2} класно ім'я"
+template_3 = "Мене звати {0}. Мені {1} роки. {0} класно ім'я"
+name = "Євген"
+age = 44
 
-mm = 'Jon'
-nn = '22'
-
-print(ss.format(mm, nn, 'Tom'))
-print(ss_1.format('Tom', mm, nn))
-print(ss_2.format(age=nn, name=mm))
+print(template_1.format(name, age, name))
+print(template_2.format(age_3=age, name_2=name))
+print(template_3.format(name, age))
 
 coord = (3, 5)
-print('X:{0[0]}, Y:{0[1]}'.format(coord))
+print('X:{1[0]}, Y:{1[1]}'.format(55, coord))
 
-name = 'Jonson'
+print('{:-^30}'.format('Євген'))
 
-print('{:<30}'.format(name))
-print('{:^30}'.format(name))
-print('{:>30}'.format(name))
-
-pi = 3.14159
-print('{:.3}'.format(pi))
+print('{:.5%}'.format(35/178))

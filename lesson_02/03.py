@@ -1,27 +1,23 @@
-a = 7
-b = a
+a = [1, 3, '445', 0, 'eef', 345.7, 0, 99, True, None, (1, 2, ('aaa', 'Hello, world!'))]
 
-print(id(a))
-print(id(b))
+print(type(a))
 
-print(a == b)
-print(a is b)
-
-a = "Liberty"
+print(a)
+a.append('rr')
+print(a)
+c = a.remove(0)
+print(a)
+print(a[3])
+del a[2]
+print(a)
+print(a[3])
+b = a.pop(2)
 print(a)
 print(b)
-print(id(a))
-print(id(b))
+print(c)
 
-b += 1
-print(b)
-print(id(b))
+a_1 = [1, 2, 3]
+a_2 = [4, 5, 6]
 
-print('-' * 50)
-
-m = 100
-n = 100
-print(m)
-print(n)
-print(id(m))
-print(id(n))
+a_1.extend(a_2)
+print(a_1)

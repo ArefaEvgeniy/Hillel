@@ -1,16 +1,11 @@
-a = (12, 0.55, "dsjhgd sf g", -78)
-c = 'Dog'
+d = {1, 3, 4, 5, '565', (5, 'ert')}
 
-print(len(a))
-print(a[:-1])
+print(type(d))
 
-b = (c,)
-print(b)
-print(type(b))
+a = [1, 3, 5, 33, 5, 3, 45, 456, 33, 1, 33, 3, 2, 1]
 
-b_2 = tuple((1, 2, 3))
-print(b_2)
-print(type(b_2))
+print(list(set(a)))
 
-print(id(a))
-print(-78 in a)
+d_1 = frozenset(d)
+
+print(type(d_1))

@@ -1,21 +1,16 @@
-# Ввести два целых числа A и B.
-# Вывести в порядке возрастания все целые числа,
-# расположенные между A и B (включая сами числа A и B ),
-# а также количество N этих чисел.
+# Ввести число, перевірити, що було введено саме число.
+# Звести його в куб.
+# Реалізацію обернути у вічний цикл із можливістю вийти з нього на запит.
 
-value_1 = input('Enter first number: ')
-value_2 = input('Enter second number: ')
 
-num_1 = int(value_1) if value_1.isdigit() else 0
-num_2 = int(value_2) if value_2.isdigit() else 0
+while True:
+    input_value = input()
 
-if num_1 > num_2:
-    num_1, num_2 = num_2, num_1
+    if not input_value.isdigit():
+        continue
 
-N = 0
-for item in range(num_1, num_2 + 1):
-    print(item, end=' ')
-    N += 1
+    print(f'Куб числа {input_value}, дорівнює: {int(input_value) ** 3}')
 
-print()
-print(f'N: {N}')
+    answer = input('Бажаєти вийти? (Y/Т): ')
+    if answer.upper() in ('Y', 'Т'):
+        break

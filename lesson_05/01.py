@@ -1,16 +1,17 @@
-c = int(input("Enter number: "))
+c = int(input())
 
-q = 0
+q = 1
 result = 1
 while c > q:
-    q += 1
+    if q == 3:
+        q += 1
+        continue
+    if q == 7:
+        break
     result *= q
+    q += 1
+    print(q)
+else:
+    print('FINISH')
 
-print(f'result: {result}')
-
-
-result_2 = 1
-for item in range(1, c + 1):
-    result_2 *= item
-
-print(f'result_2: {result_2}')
+print('result:', result)

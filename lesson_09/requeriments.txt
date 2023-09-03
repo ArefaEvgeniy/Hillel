@@ -1,6 +1,0 @@
-flake8==6.0.0
-langdetect==1.0.5
-mccabe==0.7.0
-pycodestyle==2.10.0
-pyflakes==3.0.1
-six==1.16.0

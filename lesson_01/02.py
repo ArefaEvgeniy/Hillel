@@ -1,11 +1,18 @@
-age = -5
-print(age)
-print(type(age))
+# int
 
-c = -45.3445
-print(c)
-print(type(c))
+a = 9934
+# print(a ** 999)
 
-print('%.10f' % 5.4)
-print('%.20f' % 5.4)
-print('%.50f' % 5.12)
+# float
+b = 6.5
+b_1 = -0.555
+
+#-2e6
+#6e-8
+
+print('%.50f' % 5.4)
+print('%.50f' % 5.5)
+
+aa = 0b1101
+
+print('aa:', aa)

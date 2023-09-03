@@ -1,27 +1,19 @@
 import copy
 
-first = [1, 2, 'f', [5, 6]]
-                     #  1 - 00242424
-                     #  2 - 66e4er5
-                     #  f - 886445474
-                     #  f - 886445474
-                     # [5, 6] - 9900999
-                     # first - 76732654  (00242424, 66e4er5, 886445474, 9900999)
+a = [1, 2, 3]               # ->  898678687   33345232, 55773446, 98876654
+first_copy = copy.copy(a)   # ->  689348734   33345232, 55773446, 98876654
+second_copy = copy.copy(a)  # ->  880000325   33345232, 55773446, 98876654
+third_copy = a[:]           # ->  233543212   33345232, 55773446, 98876654
 
-third = copy.copy(first)
-                     # third - 099848783  (00242424, 66e4er5, 886445474, 9900999)
-second = copy.deepcopy(first)
-                     # second - 099848783  (00242424, 66e4er5, 886445474, 6677775)
+print(id(a))
+print(id(first_copy))
+print(id(second_copy))
+print(id(third_copy))
 
-third.append(15)
-print(first)
-print(id(first))
-print(third)
-print(id(third))
-
-third[3].pop()
-print('-' * 50)
-print(first)
-print(id(first))
-print(third)
-print(id(third))
+first_copy.append(9)
+second_copy.pop(1)
+third_copy.extend(first_copy)
+print(a)
+print(first_copy)
+print(second_copy)
+print(third_copy)

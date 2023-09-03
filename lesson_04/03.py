@@ -1,9 +1,8 @@
-name = 'Jon'
-age = '22'
+from math import pi
 
-print(f"Меня зовут {name.upper()}, мне {age} года. {name} красивое имя.")
 
-pi = 3.14159
-print(f'{pi:.3f}')
+name = "Євген"
+age = 44
 
-print(f'Новое значение пи = {pi * 10 + 3}. Супер')
+print(f"Мене звати {name}. Мені {age * 5} роки. {name} класно ім'я")
+print(f'Значення пи: {pi:.5f}')

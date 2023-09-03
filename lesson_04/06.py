@@ -1,17 +1,11 @@
-# Ввести предложение.
-# Если в предложении есть слово code - вывести на экран Yes, 1
-# Если в предложении есть слово codec - вывести на экран Yes, 2
-# Иначе вывести на экран No
+a = input()
 
-input_str = input("Enter: ")
+# if a:
+#     x = True
+# else:
+#     x = 0
 
-if 'codec' in input_str:
-    print('Yes, 2')
-    if 'xxx' in input_str:
-        print('Yes, 3')
-    else:
-        print('No, No')
-elif 'code' in input_str:
-    print('Yes, 1')
-else:
-    print('No')
+# x = True if a else 0
+x = 0 if not a else False if a is ' ' else True
+
+print(x)

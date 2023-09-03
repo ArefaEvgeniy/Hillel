@@ -1,9 +1,7 @@
-ss = "Меня зовут %s, мне %s года. %s красивое имя."
-ss_2 = "Меня зовут %(name)s, мне %(age)s года. %(name)s красивое имя."
+template_1 = "Мене звати %s. Мені %s роки. %s класно ім'я"
+name = "Євген"
+age = 44
 
-name = 'Jon'
-age = '22'
-
-print(ss % (name, age, name))
-print(ss_2 % {'name': name, 'age': age})
-print("Меня зовут %s, мне %s года. %s красивое имя." % (name, age, name))
+# template_1 = "Мене звати %s. Мені %s роки. %s класно ім'я" % (name, age, name)
+print(template_1 % (name, age, name))
+print("Мене звати %(name)s. Мені %(age)s роки. %(name)s класно ім'я" % {"name": name, "age": age})
