@@ -1,20 +1,9 @@
-# bool
+a = 5.5
+b = 3.4 + 5.6
+c = 0.0
+d = -99.666666666
 
-a = True
-b = False
-c = -33.4456
+print(b)
+print(type(b))
 
-print(type(a))
-print(type(123))
-print(type(c))
-
-print(int(c))
-
-print(bool(c))
-print(bool(0))
-
-print(int(a))
-print(int(b))
-
-print(float(a))
-print(float(b))
+print('%.30f' % 5.4)

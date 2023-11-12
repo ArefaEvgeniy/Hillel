@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 
-name = input("Enter your name: ")
 
-age = 5
+# name = input("Enter your name: ")
+name = 'Bob'
+print("Hello,", name)  # це мій код
 
-best_price = 1.44
+dog_age = 10
+name = 'Nick'
+print(name)
 
-print("Hello,", name)
+name = 77
+print(name)
 
-name = 33
-
-print('New name:', name)
+print(dog_age + name)

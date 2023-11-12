@@ -1,36 +1,42 @@
-a = 'q'
-a_2 = """hElLo wORld."""
-a_3 = "49874753"
-a_4 = " "
+a = 'Hello world'
+print(len(a))
 
-print(len(a_3))
-print(len(a_4))
+print(a[0])
+print(a[4])
+print(a[10])
+print(a[-1])
+print(a[-2])
 
-s = None
+print(a[0:7])
+print(a[:7])
+print(a[1:-1])
+print(a[1:len(a)])
+print(a[1:])
+print(a[1:9:2])
+print(a[1:10:3])
+print(a[1::3])
+print(a[8::-2])
+print(a[::-1])
 
-print(a_2.upper())
-print(a_2.title())
-print(a_2.capitalize())
-print(a_2.lower())
-print('-' * 50)
-print(a_2)
-print('-' * 50)
+print(a.lower())
+print(a.upper())
 
-print(type(a_3))
-print(a_3.isdigit())
-print(a_2.find('WOR'))
+b = ' red bLAck green'
+c = '43'
+d = 43
+print(b.title())
+print(b.capitalize())
 
-print('-' * 50)
+print(b.isdigit())
+print(c.isdigit())
 
-index = a_2.find('wORld')
-print(a_2[index:10])
-ss = a_2[index::-2]
-print(a_2[::-2])
+print(b.isalpha())
 
-print(ss.upper() + '!!!')
+print(b.strip())
+print(a.strip('rld'))
+print(b.strip('rld'))
+print(b.strip('Ack'))
 
-print('hElLo wORld.' in a_2)
-
-a_2.split()
-a_2.strip()
-a_2.replace()
+print(a.split())
+print(b.split('r'))
+print(b.split('bLA'))

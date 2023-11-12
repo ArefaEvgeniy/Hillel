@@ -1,23 +1,23 @@
-a = [1, 3, '445', 0, 'eef', 345.7, 0, 99, True, None, (1, 2, ('aaa', 'Hello, world!'))]
+list_a = ['aa', 'b', 67.55, None, 67.55]
 
-print(type(a))
+print('b' in list_a)
+print(len(list_a))
+list_a.append(99)
+print(list_a)
+list_a.insert(1, 'Hello world')
+print(list_a)
 
-print(a)
-a.append('rr')
-print(a)
-c = a.remove(0)
-print(a)
-print(a[3])
-del a[2]
-print(a)
-print(a[3])
-b = a.pop(2)
-print(a)
-print(b)
+d = list_a.remove(67.55)
+print(list_a)
+print(d)
+
+del list_a[0]
+print(list_a)
+
+list_b = [0, 1, 2, 3]
+list_a.extend(list_b)
+print(list_a)
+
+c = list_a.pop(0)
+print(list_a)
 print(c)
-
-a_1 = [1, 2, 3]
-a_2 = [4, 5, 6]
-
-a_1.extend(a_2)
-print(a_1)

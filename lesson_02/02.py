@@ -1,14 +1,21 @@
-a = (1, 3, '445', 'eef', 345.7, 0, 99, True, None, (1, 2, ('aaa', 'Hello, world!')))
+a = tuple('s')
 
-a_1 = ()
-a_2 = tuple('Hello')
-
+print(a)
 print(type(a))
 
-print(345.7 in a)
+a_1 = ('s', 12, True, None, (5.5, 3.4, 0.0))
+
+print(a_1)
+print(type(a_1))
+
 print(len(a))
+print(len(a_1))
 
-print(a[-1][-1][-1][::2])
+print(12 in a_1)
+print(None in a_1)
+print(None in a)
+print(3.4 in a_1)
 
-print(a_2)
-print(type(a_2))
+print(a_1[1::2])
+
+print(a_1[10])
