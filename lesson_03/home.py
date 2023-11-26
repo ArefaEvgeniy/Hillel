@@ -55,3 +55,30 @@
 #
 # type_1 – один тип даних
 # type_2 – інший тип даних
+
+
+a1 = "text"
+a2 = "text"
+
+print('a1:', a1, ' type:', str(type(a1)), ' id:', str(id(a1)))
+print('a2:', a2, ' type:', str(type(a2)), ' id:', str(id(a2)))
+
+print('*' * 50)
+
+a1 = list(a1)
+a2 = list(a2)
+print('a1:', a1, ' type:', str(type(a1)), ' id:', str(id(a1)))
+print('a2:', a2, ' type:', str(type(a2)), ' id:', str(id(a2)))
+
+print('*' * 50)
+
+b1 = ['test', 1, 5]
+b2 = ['test', 1, 5]
+print('b1:', b1, ' type:', str(type(b1)), ' id:', str(id(b1)))
+print('b2:', b2, ' type:', str(type(b2)), ' id:', str(id(b2)))
+
+print('*' * 50)
+b1 = bool(b1)
+b2 = bool(b2)
+print('b1:', b1, ' type:', str(type(b1)), ' id:', str(id(b1)))
+print('b2:', b2, ' type:', str(type(b2)), ' id:', str(id(b2)))

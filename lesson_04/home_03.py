@@ -8,3 +8,12 @@
 #
 # *Додаткове необов'язкове завдання: тернарний вираз вміє крім визначення
 # парне/непарне так само визначати нуль.
+
+
+digit_user = input("Введить ціле число: ")
+if digit_user and (digit_user.isdigit() or (digit_user[0] == '-' and digit_user[1:].isdigit())):
+    digit_user = int(digit_user)
+    result = "0" if digit_user == 0 else "even" if digit_user % 2 == 0 else "odd"
+    print(f'digit_user is {result}')
+else:
+    print("не вірне введення")

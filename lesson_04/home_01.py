@@ -12,3 +12,25 @@
 # (Д/Y)". Якщо відповідь буде буква "Д" або буква "Y" у будь-якому регістрі,
 # то зробити вихід із вічного циклу. В іншому випадку продовжити виконання
 # програми знову.
+
+
+while True:
+
+    name = input("Введіть ваше ім'я: ").title()
+    age = input("Введіть ваш вік: ")
+
+    if age.isalpha() or int(age) <= 0 or not name.isalpha():
+        print("Помилка, повторіть введення", sep="\n")
+        continue
+    elif int(age) < 10:
+        print(f"Привіт, шкет {name}")
+    elif int(age) <= 18:
+        print(f"Як справи, {name}?")
+    elif int(age) < 100:
+        print(f"Що бажаєте {name}?")
+    else:
+        print(f"{name}, ви брешете - у наш час стільки не живуть...")
+
+    answer = input("Бажаєте вийти? (Д/Y)").lower()
+    if answer in ("y", "д"):
+        break
