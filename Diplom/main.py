@@ -46,9 +46,13 @@
 # - дуже бажано, щоб дані можна було зберігати у файл та загружати із файлу.
 
 
-def main():
-    ...
+from date_base import DB
 
+
+def main():
+    data = DB()
+    call_function = {1: data.input_data, 2: data.find, 3: data.file,
+                     4: data.file, 5: data.file}
     while True:
         print("1. Ввести новий запис")
         print("2. Пошук у БД")
@@ -59,7 +63,13 @@ def main():
         print("0. Вихід")
         choice = input("Що обираєте? ")
 
-        ...
+        if not choice.isdigit() or int(choice) > 5:
+            print("Не вірний ввід")
+            continue
+        elif int(choice) == 0:
+            break
+
+        call_function[int(choice)]()
 
 
 if __name__ == "__main__":
