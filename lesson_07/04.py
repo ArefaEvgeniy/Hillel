@@ -14,38 +14,3 @@ INPUT_LIST = [
     ['one', 'two', '55', {1, 4, 'big', True}, ['milk', 0, 'bred']],
     'End'
 ]
-
-
-def find_word(word, input_list):
-    res = False
-
-    for item in input_list:
-        if isinstance(item, (str, int)) and str(item) == word:
-            res = True
-            break
-        elif isinstance(item, (list, tuple, set)):
-            res = find_word(word, item)
-            if res:
-                break
-
-    return res
-
-
-def main():
-    while True:
-        input_word = input('Enter your word: ')
-
-        if not input_word:
-            continue
-
-        if find_word(input_word, INPUT_LIST):
-            print('Word found')
-        else:
-            print('Word did not find')
-
-        print('Do you wont exit? (Y/N)')
-        if input().upper == 'Y':
-            break
-
-
-main()

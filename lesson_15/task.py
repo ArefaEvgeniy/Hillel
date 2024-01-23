@@ -5,38 +5,3 @@ table = [
 ]
 
 target = 33
-
-found = False
-for row, record in enumerate(table):
-    for column, field in enumerate(record):
-        for index, item in enumerate(field):
-            if item == target:
-                found = True
-                break
-        if found:
-            break
-    if found:
-        break
-if found:
-    print("found at ({0}, {1}, {2})".format(row+1, column+1, index+1))
-else:
-    print("not found")
-
-
-class MyExcept(Exception):
-    def __init__(self, message='Виняток, якщо число знайдено'):
-        super().__init__(message)
-
-
-try:
-    for row, record in enumerate(table):
-        for column, field in enumerate(record):
-            for index, item in enumerate(field):
-                if item == target:
-                    raise MyExcept
-except MyExcept:
-    print("found at ({0}, {1}, {2})".format(row+1, column+1, index+1))
-else:
-    print("not found")
-
-raise MyExcept

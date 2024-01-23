@@ -8,14 +8,3 @@ class K1(A, B, C): ...
 class K2(B, D): ...
 class K3(C, D, E): ...
 class Z(K1, K2, K3): ...
-
-
-print(Z.mro())
-
-
-class String(str):
-    pass
-
-
-s = String('ertrtr')
-print(s.upper())
