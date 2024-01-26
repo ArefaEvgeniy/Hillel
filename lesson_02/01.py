@@ -1,0 +1,35 @@
+a = 'hello WorLD'
+print(a)
+print(type(a))
+print(len(a))
+print(a[0])
+print(a[1])
+print(a[10])
+print(a[-1])
+print(a[6])
+print(a[-5])
+print(a[0:4])
+print(a[0:5])
+print(a[:5])
+print(a[2:5])
+
+b = a[:5]
+print(a)
+print(b)
+print(a[:])
+
+print(a[8:1:-1])
+print(a[9:0])
+
+print('-' * 100)
+
+print(a.upper())
+print(a.lower())
+print(a.isdigit())
+print('2345.67'.isdigit())
+print('234567'.isdigit())
+print('kjhgdfskjdsf'.isalpha())
+print('kjhgdfskjdskf'.replace('k', '44', 2))
+print('  sdgkjhttkjfgd sd,j bkjbttttt'.strip('bttttt'))
+print('sdgkjhttkjfgd sd,j bkjbttttt'.split())
+print('sdgkjhttkjfgd sd,j bkjbttttt'.split('j'))
