@@ -38,3 +38,31 @@ while True:
         break
     else:
         continue
+
+
+while True:
+    n = input('insert  value')
+    if not n.isdigit() or n == 0:
+        print('try one more time')
+        continue
+
+    n = int(n)
+
+    i = 1
+    ksum = 0
+    while i <= n:
+        if i % 3 != 0:
+            ksum += i ** 3
+        i += 1
+    print(ksum)
+
+    m = 1
+    ksum = 0
+    for item in range(m, n+1):
+        if item % 3 != 0:
+            ksum += item ** 3
+    print(ksum)
+
+    exit_user = input('Желаете выйти? (Д/Y):\nЖелаете продолжить нажмите Enter: ')
+    if exit_user.upper() in ('Д', 'Y'):
+        break
