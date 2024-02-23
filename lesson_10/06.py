@@ -1,3 +1,13 @@
-# Слово "ciào" якому в кодуванні "utf-8" відповідає b'ci\xc3\xa0o',
-# записати в текстовий файл у кодуванні "Latin1".
-# Потім прочитати його та вивести на екран.
+with open('06.txt', 'wb') as f:
+    f.write('Hello, ХЇЕН world\n'.encode())
+
+with open('06.txt', encoding='utf-8') as f:
+    print(f.read())
+
+with open('06.txt', 'rb') as f:
+    b = f.read()
+
+print('-' * 50)
+print(b)
+print(type(b))
+print(b.decode())
