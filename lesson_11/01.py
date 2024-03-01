@@ -12,7 +12,8 @@ input_data = [
         "score": 5000.45,
         "name": "Євген",
         "completed": None,
-        "children": ('Alice', 'Nick')
+        "children": ('Alice', 'Nick'),
+        "children_tuple": True
     },
     {
         "userId": 34,
@@ -54,6 +55,16 @@ with open('test.json', 'w') as file:
 
 with open('test.json') as file:
     data = json.load(file)
+
+
+# print(data)
+# new_data = []
+# for item in data:
+#     if item.get("children_tuple") and item.get("children"):
+#         item["children"] = tuple(item["children"])
+#     new_data.append(item)
+#
+# print(new_data)
 
 print(data)
 print(type(data))
