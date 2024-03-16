@@ -37,8 +37,9 @@
 
 
 class String(str):
-    pass
 
+    def __add__(self, other):
+        return String(super().__add__(str(other)))
 
-a = String('RRR')
-print(a.title())
+    def __sub__(self, other):
+        return String(self.replace(str(other), "", 1))
