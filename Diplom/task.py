@@ -46,3 +46,51 @@
 # - правильно розраховувати кількість повних років людини на основі дати
 # народження та дати смерті або поточної дати;
 # - дуже бажано, щоб дані можна було зберігати у файл та загружати із файлу.
+
+def input_data():
+    print('input_data')
+
+
+def search_data():
+    print('search_data')
+
+
+def save_data():
+    print('save_data')
+
+
+def load_data():
+    print('load_data')
+
+
+def quit():
+    print('quit')
+
+
+def wrong_data():
+    print('wrong_data')
+
+
+my_dict = {1: input_data, 2: search_data, 3: save_data, 4: load_data, 5: quit}
+
+a = int(input('Оберить пункт меню: '))
+
+my_dict.get(a, wrong_data)()
+
+# if a == 1:
+#     input_data()
+#
+# elif a == 2:
+#     search_data()
+#
+# elif a == 3:
+#     save_data()
+#
+# elif a == 4:
+#     load_data()
+#
+# elif a == 5:
+#     quit()
+#
+# else:
+#     print('Wrong input')
