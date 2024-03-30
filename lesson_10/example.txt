@@ -1,6 +1,0 @@
-This is a first line.
-This is a second line.
-This is a line before last.
-This is a last line
-This is a new line
-This is a more line
