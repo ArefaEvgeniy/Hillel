@@ -24,33 +24,28 @@
 # 0 → Ви ввели нуль
 # -0.45.6 → Ви ввели не правильне число: -0.45.6
 
-def str_to_num(num):
-    result = f'Ви ввели не правильне число: {num}'
-
-    if num.isdigit():
-        if int(num) > 0:
-            result = f'Ви ввели позитивне ціле число: {int(num)}'
-        else:
-            result = f'Ви ввели нуль'
-
-    elif num[0] == '-' and len(num) > 1 and num[1:].isdigit():
-        result = f'Ви ввели від\'ємне ціле число: {int(num)}'
-
-    elif num.replace('.', '', 1).replace('-', '', 1).isdigit()\
-            and num.find('-') in (-1, 0):
-        if float(num) > 0:
-            result = f'Ви ввели позитивне дробове число: {float(num)}'
-        elif float(num) < 0:
-            result = f'Ви ввели від\'ємне дробове число: {float(num)}'
-
-    return result
-
-
-while True:
-    input_str = input('Введіть число: ').replace(',', '.')
-    if input_str.lower() in ('вихід', 'exit', 'quit', 'e', 'q', 'в'):
-        break
-    elif input_str:
-        print(str_to_num(input_str))
+def func(val):
+    ret = "Вы ввели "
+    val = val.replace(",", ".").strip()
+    if not val.replace("-", "", 1).replace(".", "", 1).strip().isdigit():
+        ret += " не правильне число " + val
+    elif val == "0" or (val.replace("-", "", 1).replace(".", "", 1).isdigit()
+                        and int(val.replace("-", "", 1).replace(".", "", 1)) == 0):
+        ret += "нуль"
     else:
-        print('Ви нічого не ввели, спробуйте ще раз')
+        ret += "від'ємне " if "-" in val else "позитивне "
+        ret += "ціле число: " if "." not in val else "дробове число: "
+        ret += val
+    return ret
+
+
+def main():
+    while True:
+        e = input("Введить число або значення виходу: ").lower()
+        if e == "выход" or e == "exit" or e == "quit" or e == "e" or e == "q":
+            break
+        else:
+            print(func(e))
+
+
+main()
