@@ -9,5 +9,17 @@
 # Кількість голосних літер: 3
 # Кількість приголосних літер: 7
 
-
-
+aei = "AEIOUY"
+bcd = "BCDFGJHKLMNPQRSTVWXZ"
+s = input("Введіть рядок:").upper()
+i = 0
+s1 = ""
+s2 = ""
+while i < len(s):
+    if aei.find(s[i]) >= 0:
+        s1 += s[i]
+    if bcd.find(s[i]) >= 0:
+        s2 += s[i]
+    i += 1
+print("Кількість голосних літер:", len(s1))
+print("Кількість приголосних літер:", len(s2))
