@@ -11,3 +11,20 @@
 #
 # Приклад висновку:
 # {'a': [1], 'b': [2, 3], 'c': [4, 5], 'd': [6]}
+
+def merge_dicts(*args):
+    k = {}
+    for i in args:
+        for key, value in i.items():
+            if key in k:
+                k[key].append(value)
+            else:
+                k[key] = [value]
+    return k
+
+
+dict_1 = {'a': 1, 'b': 2}
+dict_2 = {'b': 3, 'c': 4}
+dict_3 = {'c': 5, 'd': 6}
+
+print(merge_dicts(dict_1, dict_2, dict_3))
