@@ -3,6 +3,9 @@ from langdetect import detect
 # import langdetect
 # import tttr
 
+a = 45
+c = 33
+b = 'world'
 
 print(detect("War doesn't show who's right, just who's left."))
 print(detect("War doesn't show who's right, just who's left."))
