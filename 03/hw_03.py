@@ -16,3 +16,13 @@
 
 # Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
 # Робити запит на введення даних від користувача не потрібно.
+
+
+input_list = [56, 78, 20]
+
+mid = (len(input_list) + 1) // 2
+
+first_half = input_list[:mid]
+second_half = input_list[mid:]
+
+print(input_list, "=>", [first_half, second_half])
