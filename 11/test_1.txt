@@ -1,0 +1,6 @@
+Hellow, world
+second line
+
+третя строка
+line before last
+last lineНовий текстНовий текстНовий текстНовий текст
