@@ -18,3 +18,12 @@
 # correct_sentence("Greetings. Friends") -> "Greetings. Friends."
 # correct_sentence("Greetings, friends.") -> "Greetings, friends."
 # correct_sentence("greetings, friends.") -> "Greetings, friends."
+
+
+def correct_sentence(text: str) -> str:
+    return (text[0].capitalize() + text[1:]).rstrip(".") + "."
+
+
+result = correct_sentence("greetings, friends.")
+
+print(result)
