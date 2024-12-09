@@ -11,10 +11,14 @@ def get_data():
     def get_processes():
         pass
 
+    def get_temp():
+        pass
+
     data = []
     data.append(get_CPU())
     data.append(get_memory())
     data.append(get_processes())
+    data.append(get_temp())
     return data
 
 

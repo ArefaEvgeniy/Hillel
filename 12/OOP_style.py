@@ -30,6 +30,14 @@ class Processes(General):
         ...
 
 
+class Temp(General):
+    def get(self):
+        ...
+
+    def print_data(self):
+        ...
+
+
 class Main:
     def __init__(self, *args):
         self.data = args
@@ -46,6 +54,7 @@ class Main:
 cpu = CPU()
 memory = Memory()
 processes = Processes()
+temp = Temp()
 
-main = Main(cpu, memory, processes)
+main = Main(cpu, memory, processes, temp)
 main.run()
