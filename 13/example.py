@@ -32,7 +32,7 @@ try:
         for column, field in enumerate(record):
             for index, item in enumerate(field):
                 if item == target:
-                    raise MyException
+                    raise MyException()
 except MyException:
     print("found at ({0}, {1}, {2})".format(row+1, column+1, index+1))
 else:
