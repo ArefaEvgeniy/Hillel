@@ -12,3 +12,32 @@
 # який потрібно відправляти з кожним запитом на сервер.
 # Для того, щоб робити запити треба використовувати метод get() модуля requests.
 # Його треба з початку встановити за допомогою pip install requests
+
+
+import requests
+import json
+
+API_Key = '<your_API_KEY>'  # треба вставити замість <your_API_KEY> свій згенерований API Key
+request_api = 'http://api.weatherapi.com/v1/current.json?key={}&q={}&aqi=no'
+
+
+while True:
+    city = input('Введіть назву міста: ')
+    response = requests.get(request_api.format(API_Key, city))
+
+    if response.status_code == 200:
+        try:
+            data = json.loads(response.text)
+            print('Місто:', data['location']['name'])
+            print('Країна:', data['location']['country'])
+            print(f"Розташування, широта: {data['location']['lat']}, довгота: {data['location']['lon']}")
+            print('Часовий пояс:', data['location']['tz_id'])
+            print('Температура:', data['current']['temp_c'])
+            print('-' * 100)
+        except (KeyError, json.decoder.JSONDecodeError):
+            print('Не вірний формат відповіді:', response.text)
+    else:
+        print('Помилка, статус відповіді:', response.status_code)
+
+    if input('Бажаєте вийти? (Y/Д): ').upper() in ('Y', 'Д'):
+        break
