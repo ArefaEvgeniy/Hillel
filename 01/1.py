@@ -1,6 +1,6 @@
 # import math
 import requests
-from math import pi
+from math import pi  # імпортування змінної пі
 
 
 print("Hellow, worlds")
