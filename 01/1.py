@@ -12,3 +12,5 @@ print(response.text)
 
 a = 90
 print(a)
+
+b = a - 44
