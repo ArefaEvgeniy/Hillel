@@ -6,3 +6,13 @@
 # Приклад:
 # Введіть рядок: Hello, world!
 # Результат: Hll, wrld!
+
+
+aei = "AEIOUY"
+s = input("Введіть рядок: ")
+i = 0
+while i < len(aei):
+    s = s.replace(aei[i], "")
+    s = s.replace(aei[i].lower(), "")
+    i += 1
+print("Результат: ", s)
