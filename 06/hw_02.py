@@ -21,35 +21,3 @@
 # 8639999 -> 99 днів, 23:59:59
 # 22493 -> 0 днів, 06:14:53
 # 7948799 -> 91 день, 23:59:59
-
-def check(seconds):
-    number = int(seconds)
-
-    if number < 0 or number >= 8640000:
-        print("Error")
-    else:
-        days, remainder = divmod(number, 24 * 60 * 60)
-        hours, remainder = divmod(remainder, 60 * 60)
-        minutes, seconds = divmod(remainder, 60)
-
-        if days % 10 == 1 and days % 100 != 11:
-            day_word = "день"
-        elif days % 10 in (2, 3, 4) and days % 100 not in (12, 13, 14):
-            day_word = "дні"
-        else:
-            day_word = "днів"
-
-        number_time = f"{str(hours)}:{str(minutes)}:{str(seconds)}"
-
-        print(f"{days} {day_word}, {number_time}")
-
-
-check("0")
-check("224930")
-check("466289")
-check("950400")
-check("1209600")
-check("1900800")
-check("8639999")
-check("22493")
-check("7948799")

@@ -10,14 +10,3 @@
 # assert is_palindrome('a.') == True, 'Test3'
 # assert is_palindrome('aurora') == False, 'Test4'
 # print("ОК")
-
-def check(my_variable):
-    filtered_text = "".join(char.lower() for char in my_variable if char.isalnum())
-    return filtered_text == filtered_text[::-1]
-
-
-print(check('A man, a plan, a canal: Panama'))
-print(check('0P'))
-print(check('a.'))
-print(check('aurora'))
-print(check('Топ.пОт '))

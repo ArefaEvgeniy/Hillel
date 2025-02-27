@@ -9,19 +9,3 @@
 # assert find_unique_value([2, 3, 3, 3, 5, 5]) == 2, 'Test2'
 # assert find_unique_value([5, 5, 5, 2, 2, 0.5]) == 0.5, 'Test3'
 # print("ОК")
-
-def check(my_variable):
-    counts = {}
-    for num in my_variable:
-        counts[num] = counts.get(num, 0) + 1
-
-    for num, count in counts.items():
-        if count == 1:
-            return num
-
-
-print(check([1, 2, 1, 1]))
-print(check([2, 3, 3, 3, 5, 5]))
-print(check([5, 5, 5, 2, 2, 0.5]))
-print(check([5, 2, 3, 4]))
-print(check([5, 5, 5, 5]))

@@ -9,20 +9,3 @@
 # 33 -> 9
 # 25 -> 0
 # 1 -> 1
-
-def check(my_variable):
-    num = int(my_variable)
-    while num > 9:
-        result = 1
-        for i in str(num):
-            result = result * int(i)
-        num = result
-    print(num)
-
-
-check("999")
-check("1000")
-check("423")
-check("33")
-check("25")
-check("1")
