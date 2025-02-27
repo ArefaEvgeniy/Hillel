@@ -14,3 +14,14 @@
 # assert add_one([0]) == [1], 'Test3'
 # assert add_one([9]) == [1, 0], 'Test4'
 # print("ОК")
+
+def check(my_variable):
+    num = int("".join(map(str, my_variable)))
+    num += 1
+    return [int(digit) for digit in str(num)]
+
+
+print(check([1, 2, 3, 4]))
+print(check([9, 9, 9]))
+print(check([0]))
+print(check([9]))
