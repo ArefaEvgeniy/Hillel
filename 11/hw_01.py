@@ -16,7 +16,6 @@
 # assert list(prime_generator(29)) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29], 'Test3'
 # print('Ok')
 
-
 def prime_generator(end):
     for i in range(2, end + 1):
         if all(i % n != 0 for n in range(2, i)):

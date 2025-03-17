@@ -14,6 +14,7 @@
 # assert list(generate_cube_numbers(100)) == [8, 27, 64], '5 у кубі це 125, а воно вже більше 100'
 # assert list(generate_cube_numbers(1000)) == [8, 27, 64, 125, 216, 343, 512, 729, 1000], '10 у кубі це 1000'
 
+
 def generate_cube_numbers(end):
     i = 2
     while i ** 3 <= end:
