@@ -9,7 +9,7 @@ str_2 = ("Truskawka Albion, z najnowszej hodowli wiecznie kwitnących odmian, za
          "końca października! Każda truskawka może wyprodukować 450 g pysznych owoców rocznie! Truskawka Albion to "
          "kolejny rodzaj truskawki, która rośnie jako pnące pędy z długimi, elastycznymi korzeniami. Bogate, pyszne, "
          "słodkie, ciemnoczerwone jagody mają niepowtarzalny smak, który pozostaje taki sam przez całe lato. Ponadto "
-         "ta energiczna odmiana ma zwiększoną odporność na choroby, takie jak werticilioza i zgnilizna korony.")
+         "ta energiczna odmiana 55 ma zwiększoną odporność na choroby, takie jak werticilioza i zgnilizna korony.")
 
 str_3 = ("大兴“好房子”建面约168-222㎡低密平墅 西红门新品迭代88-139㎡带阳台三至四居 石景山建面约80-130平二至四居售楼处开放 "
          "首付146万起抢西四环全四居临铁公园住区 京西五环 约91-143㎡学府洋房 样板间开放 京西约76-149㎡二至四居全明洋房全线封顶 "
@@ -23,3 +23,6 @@ from langdetect import detect
 print(detect(str_1))
 print(detect(str_2))
 print(detect(str_3))
+
+a = 333
+
