@@ -10,3 +10,20 @@
 # assert is_palindrome('a.') == True, 'Test3'
 # assert is_palindrome('aurora') == False, 'Test4'
 # print("ОК")
+
+import string
+
+
+def is_palindrome(s):
+    s = ''.join(list(filter(str.isalnum, s.lower())))
+    rev_s = s[::-1]
+    print(f'was: {s}')
+    print(f'became: {rev_s}')
+    return rev_s == s
+
+
+assert is_palindrome('A man, a plan, a canal: Panama') == True, 'Test1'
+assert is_palindrome('0P') == False, 'Test2'
+assert is_palindrome('a.') == True, 'Test3'
+assert is_palindrome('aurora') == False, 'Test4'
+print("ОК")

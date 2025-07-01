@@ -15,3 +15,18 @@
 # assert popular_words('''When I was One I had just begun When I was Two I was nearly new ''',
 #                      ['i', 'was', 'three', 'near']) == {'i': 4, 'was': 3, 'three': 0, 'near': 0}, 'Test1'
 # print('OK')
+
+
+def popular_words(text, words):
+    txt = text.lower().split()
+    result = {}
+    for word in words:
+        result[word] = txt.count(word)
+    return result
+
+
+assert popular_words('''When I was One I had just begun When I was Two I was nearly new ''',
+                     ['i', 'was', 'three', 'near']) == {'i': 4, 'was': 3, 'three': 0, 'near': 0}, 'Test1'
+assert popular_words("1 One is one but two isn't Tw0 and IS tWo 1",
+                     ['1', 'one', 'two', 'is', "n't"]) == {'1': 2, 'one': 2, 'two': 2, 'is': 2, "n't": 0}, 'Test2'
+print('OK')
