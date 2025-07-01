@@ -10,5 +10,3 @@
 # assert is_palindrome('a.') == True, 'Test3'
 # assert is_palindrome('aurora') == False, 'Test4'
 # print("ОК")
-
-import string
