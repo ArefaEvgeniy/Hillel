@@ -18,3 +18,14 @@
 # Ділення: 2.5
 # Залишок від ділення: 1
 # Перше число у ступені другого числа: 25
+
+
+first_number = int(input("Введіть перше число: "))
+second_number = int(input("Введіть друге число: "))
+
+print("Сумма: ", first_number + second_number)
+print("Різниця: ", first_number - second_number)
+print("Добуток: ", first_number * second_number)
+print("Ділення: ", first_number / second_number)
+print("Залишок від розподілу: ", first_number % second_number)
+print("Перше число у ступені другого числа: ", first_number ** second_number)
