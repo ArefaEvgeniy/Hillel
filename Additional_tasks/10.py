@@ -7,3 +7,15 @@
 # Приклад:
 # Введіть позитивне число: 17
 # Число 17 є простим.
+
+
+number = int(input('Введіть ціле позитивне число:'))
+count = 2
+while count < number:
+    if number % count == 0:
+        print('Число', number, 'не є простим.')
+        break
+    count += 1
+
+else:
+    print('Число', number, 'є простим.')
