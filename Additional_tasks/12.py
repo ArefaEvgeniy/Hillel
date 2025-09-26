@@ -10,3 +10,11 @@
 # Округлене значення: 5
 # Введіть дійсне число: 5.5
 # Округлене значення: 6
+
+
+value = float(input('Введіть дійсне число:'))
+if value > 0:
+    new_value = int(value + 0.5)
+else:
+    new_value = int(value - 0.5)
+print('Округлене значення:', new_value)
