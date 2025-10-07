@@ -8,3 +8,16 @@
 # Сума чисел: 27
 # Мінімальне значення: 1
 # Максимальне значення: 9
+
+
+def vse(a):
+    for i in range(len(a)):
+        a[i] = int(a[i])
+    return sum(a), max(a), min(a)
+
+
+x = input("Введіть числа: ").split(', ')
+s, mx, mn = vse(x)
+print("Сума чисел:", s)
+print("Мінімальне значення:", mx)
+print("Максимальне значення:", mn)

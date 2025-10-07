@@ -10,3 +10,12 @@
 # 3  6  9 12 15
 # 4  8 12 16 20
 # 5 10 15 20 25
+
+
+N = int(input("Введіть число N:"))
+L = len(str(N * N)) + 2
+print("Таблиця множення:")
+for i in range(1, N+1):
+    for j in range(1, N+1):
+        print(f"{i*j:{L}d}", end="")
+    print("\n")
