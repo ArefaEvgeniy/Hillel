@@ -14,10 +14,15 @@ def get_data():
         ...
         return data
 
+    def get_temp(data):
+        ...
+        return data
+
     data = {}
     data = get_cpu(data)
     data = get_memory(data)
     data = get_process(data)
+    data = get_temp(data)
 
     return data
 
