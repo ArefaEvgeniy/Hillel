@@ -15,3 +15,14 @@
 #
 # Приклад висновку:
 # {'Alice': 89.0, 'Bob': 80.67, 'Carol': 91.67}
+
+
+def calculate_average_grade(x):
+    k = {}
+    for key, value in x.items():
+        k[key] = round(sum(value) / len(value), 2)
+    return k
+
+
+grades = {'Alice': [85, 90, 92], 'Bob': [78, 80, 84], 'Carol': [92, 88, 95]}
+print(calculate_average_grade(grades))
