@@ -29,3 +29,37 @@
 # -0.45.6 → Ви ввели не правильне число: -0.45.6
 # -5-6    → Ви ввели не правильне число: -5-6
 # .-777   → Ви ввели не правильне число: .-777
+
+
+def str_to_num(num):
+    result = f'Ви ввели не правильне число: {num}'
+
+    if num.isdigit():
+        if int(num) > 0:
+            result = f'Ви ввели позитивне ціле число: {int(num)}'
+        else:
+            result = f'Ви ввели нуль'
+
+    elif num[0] == '-' and len(num) > 1 and num[1:].isdigit():
+        result = f'Ви ввели від\'ємне ціле число: {int(num)}'
+
+    elif num.replace('.', '', 1).replace('-', '', 1).isdigit()\
+            and num.find('-') in (-1, 0):
+        if float(num) > 0:
+            result = f'Ви ввели позитивне дробове число: {float(num)}'
+        elif float(num) < 0:
+            result = f'Ви ввели від\'ємне дробове число: {float(num)}'
+        else:
+            result = f'Ви ввели нуль'
+
+    return result
+
+
+while True:
+    input_str = input('Введіть число: ').replace(',', '.')
+    if input_str.lower() in ('вихід', 'exit', 'quit', 'e', 'q', 'в'):
+        break
+    elif input_str:
+        print(str_to_num(input_str))
+    else:
+        print('Ви нічого не ввели, спробуйте ще раз')
