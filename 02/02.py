@@ -5,6 +5,8 @@ d = 100
 e = -10000
 f = 12908
 
+# class = 34
+
 print(id(a))
 print(id(b))
 print(id(c))
