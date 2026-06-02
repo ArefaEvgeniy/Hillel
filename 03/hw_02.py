@@ -12,3 +12,20 @@
 
 # Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
 # Робити запит на введення даних від користувача не потрібно.
+
+
+def move_last_to_first(spisok):
+    new_spisok = spisok[:]
+    if len(new_spisok) <= 1:
+        return new_spisok
+    else:
+        last_element = new_spisok.pop()
+        new_spisok.insert(0, last_element)
+        return new_spisok
+
+
+
+print(move_last_to_first([12, 3, 4, 10]))
+print(move_last_to_first([1]))
+print(move_last_to_first([]))
+print(move_last_to_first([12, 3, 4, 10, 8]))
