@@ -16,17 +16,3 @@
 
 # Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
 # Робити запит на введення даних від користувача не потрібно.
-
-def split_list(lst):
-    mid = (len(lst) + 1) // 2
-    result = [lst[:mid], lst[mid:]]
-
-    return result
-
-
-print(split_list([1, 2, 3, 4, 5, 6]))
-print(split_list([1, 2, 3]))
-print(split_list([1, 2, 3, 4, 5]))
-print(split_list([1]))
-print(split_list([]))
-print(split_list([1, 2, 3, 4, 5, 6, 7]))
