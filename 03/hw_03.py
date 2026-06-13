@@ -16,3 +16,20 @@
 
 # Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
 # Робити запит на введення даних від користувача не потрібно.
+
+
+def func(elements):
+    midpoint = (len(elements) + 1) // 2
+
+    first_half = elements[:midpoint]
+    second_half = elements[midpoint:]
+
+    print([first_half, second_half])
+
+
+func([1, 2, 3, 4, 5, 6])
+func([1, 2, 3])
+func([1, 2, 3, 4, 5])
+func([1])
+func([])
+func([1, 2, 3, 4, 5, 6, 7])
