@@ -13,15 +13,10 @@
 # Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
 # Робити запит на введення даних від користувача не потрібно.
 
-def func(input_lst):
-    if len(input_lst) > 1:
-        last_element = input_lst.pop()
-        input_lst.insert(0, last_element)
 
-    return input_lst
+input_list = input("Введіть елементи списку через пробіл: ").split()
+if len(input_list) > 1:
+    input_list.insert(0, input_list[-1])
+    del input_list[-1]
 
-
-print(func([12, 3, 4, 10]))
-print(func([1]))
-print(func([]))
-print(func([12, 3, 4, 10, 8]))
+print(input_list)

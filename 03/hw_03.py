@@ -18,18 +18,11 @@
 # Робити запит на введення даних від користувача не потрібно.
 
 
-def func(elements):
-    midpoint = (len(elements) + 1) // 2
+input_list = [56, 78, 20]
 
-    first_half = elements[:midpoint]
-    second_half = elements[midpoint:]
+mid = (len(input_list) + 1) // 2
 
-    print([first_half, second_half])
+first_half = input_list[:mid]
+second_half = input_list[mid:]
 
-
-func([1, 2, 3, 4, 5, 6])
-func([1, 2, 3])
-func([1, 2, 3, 4, 5])
-func([1])
-func([])
-func([1, 2, 3, 4, 5, 6, 7])
+print(input_list, "=>", [first_half, second_half])

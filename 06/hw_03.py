@@ -9,3 +9,26 @@
 # 33 -> 9
 # 25 -> 0
 # 1 -> 1
+
+
+def func(numb):
+    numb = str(numb)
+    result = 1
+    for char in numb:
+        result *= int(char)
+
+    while result > 9:
+        temp = str(result)
+        result = 1
+        for char in temp:
+            result *= int(char)
+
+    print(result)
+
+
+func(999)
+func(1000)
+func(423)
+func(33)
+func(25)
+func(1)
