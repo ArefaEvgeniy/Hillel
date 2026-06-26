@@ -17,9 +17,9 @@ def decorator_1(func):
 
 def decorator_2(func):
     def wrapper():
-        print("</----------\>")
+        print(r"</----------\>")
         func()
-        print("<\______/>")
+        print(r"<\______/>")
 
     return wrapper
 
