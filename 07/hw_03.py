@@ -22,3 +22,16 @@
 # second_index("find the river", "e") -> 12
 # second_index("hi", "H") -> None
 # second_index("Hello, hello", "lo") -> 10
+
+
+def second_index(text, some_str):
+    index = text.find(some_str)
+    if index != -1:
+        index = text.find(some_str, index + 1)
+
+    return index if index != -1 else None
+
+
+res_string = second_index("Hello, hello", "lo")
+
+print(res_string)
