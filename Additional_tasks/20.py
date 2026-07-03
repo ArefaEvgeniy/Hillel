@@ -21,3 +21,40 @@
 # 1 x 0.05
 # 1 x 0.02
 # 1 x 0.01
+
+
+summa = float(input("Введіть суму: ").replace(',', '.'))
+summa_euros = int(summa)
+summa_cents = round((summa - summa_euros) * 100)
+
+banknotes = [500, 200, 100, 50, 20, 10, 5]
+coins = [1, 2, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]
+
+number_of_banknotes = 0
+number_of_coins = 0
+result = ['Склад суми:',]
+
+remainder = summa_euros
+for item in banknotes:
+    number = remainder // item
+    remainder %= item
+    if number > 0:
+        number_of_banknotes += number
+        result.append(f'{number} x {item}')
+    if remainder == 0:
+        break
+
+remainder = (remainder * 100) + summa_cents
+for item in coins:
+    number = remainder // (int(item * 100))
+    remainder %= (int(item * 100))
+    if number > 0:
+        number_of_coins += number
+        result.append(f'{number} x {item}')
+    if remainder == 0:
+        break
+
+print('Кількість банкнот:', number_of_banknotes)
+print('Кількість монет:', number_of_coins)
+if len(result) > 1:
+    print('\n'.join(result))
