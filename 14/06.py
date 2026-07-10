@@ -16,6 +16,11 @@ except LookupError:
 except Exception as err:
     print(f"Error: {err}")
     c = -1
+else:
+    print("Division successful.")
+finally:
+    print("Finally block executed.")
+
 
 print(c)
 print(z)
