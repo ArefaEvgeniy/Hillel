@@ -33,3 +33,28 @@
 # coffe(milk=2, suger=2, double=False)  # Результат: 'з подвійним молоком та подвійним цукром кава'
 # 
 # * Зверніть увагу на те, що результат завжди виводиться у одну строку.
+
+
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        if kwargs.get("milk") or kwargs.get("suger"):
+            print('з ', end=' ')
+            if kwargs.get("milk"):
+                print('подвійним молоком', end=' ') if kwargs['milk'] > 1 \
+                    else print('молоком', end=' ')
+            if kwargs.get("milk") and kwargs.get("suger"):
+                print('та', end=' ')
+            if kwargs.get("suger"):
+                print('подвійним цукром', end=' ') if kwargs['suger'] > 1 \
+                    else print('цукром', end=' ')
+        if kwargs.get("double"):
+            print('подвійна', end=' ')
+
+        func()
+
+    return wrapper
+
+
+@decorator
+def coffe():
+    print('кава')
