@@ -9,3 +9,23 @@
 #
 # Приклад висновку:
 # Анаграми: ['dog', 'god'], ['cat', 'tac', 'act']
+
+
+def anagrams(x):
+    a = []
+    for i in x:
+        i = i.strip('[]"\',')
+        for k in a:
+            if sorted(k[0]) == sorted(i):
+                k.append(i)
+                break
+        else:
+            a.append([i])
+    return a
+
+
+s = input("Введите список: ").split()
+print("Анаграми: ")
+for k in anagrams(s):
+    if len(k) > 1:
+        print(k)
