@@ -17,10 +17,16 @@ def get_data():
         ...
         return data
 
+    def get_temperature():
+        data = ""
+        ...
+        return data
+
     data = {
         "cpu": get_cpu(),
         "memory": get_memory(),
-        "processes": get_processes()
+        "processes": get_processes(),
+        "temperature": get_temperature()
     }
     return data
 

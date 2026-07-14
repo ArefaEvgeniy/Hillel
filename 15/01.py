@@ -2,8 +2,11 @@ class Myclass:
     def __init__(self, name):
         self.name = name
 
-    def greet(self):
+    def __greet__(self):
         return f"Hello, {self.name}!"
+
+    def greet(self):
+        return self.__greet__()
 
     @staticmethod
     def hello(a, b):
