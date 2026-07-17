@@ -1,0 +1,61 @@
+1) Web:
+    - Frameworks: Flask, Django, Fast-API
+    - ORM: Django ORM, SQLAlchemy, Peewee, Tortoise-ORM
+    - Frontend: HTML, CSS, JavaScript, Jinja2, Bootstrap
+    - Databases: SQL, MySQL, Postgres, MariaDB
+    - Servers: Nginx, Apache, Gunicorn, uWSGI
+
+2) Data Analysis (Big Data / Analytics)
+    - Libraries: Pandas, NumPy, Polars, Matplotlib, Seaborn, Plotly, Dask, Vaex
+    - Visualization: Matplotlib, Seaborn, Plotly, Bokeh
+    - Databases: SQL, MySQL, Postgres, MariaDB
+
+3) Machine Learning / AI:
+    - Machine Learning: scikit-learn, XGBoost, CatBoost, LightGBM
+    - Deep Learning: TensorFlow, Keras, PyTorch
+    - Data Manipulation: Pandas, NumPy
+    - Computer Vision: OpenCV, Pillow
+    - NLP: NLTK, spaCy, Hugging Face Transformers
+
+4) Web Scraping:
+    - Libraries: Scrapy, BeautifulSoup, Selenium, Requests, lxml
+    - Automation: PyAutoGUI, RoboBrowser, MechanicalSoup
+
+5) Testing / QA Automation
+    - Testing Frameworks: PyTest, Unittest, Robot Framework
+    - UI Automation: Selenium, Playwright
+    - Reporting: Allure, HTMLTestRunner
+    - CI/CD: Jenkins, GitHub Actions, GitLab CI
+
+6) DevOps / Automation
+    - Configuration Management: Ansible, SaltStack, Chef, Puppet
+    - Containerization: Docker, Kubernetes
+    - CI/CD: Jenkins, GitHub Actions, GitLab CI
+    - Monitoring: Prometheus, Grafana, ELK Stack
+
+7) Networking
+    - Libraries: socket, paramiko, scapy, netmiko
+    - Protocols: HTTP, HTTPS, FTP, SSH, TCP/IP
+
+8) Async Programming
+    - Libraries: asyncio, aiohttp, trio, curio
+    - Frameworks: FastAPI, Sanic
+
+9) Desktop Applications
+    - GUI Frameworks: Tkinter, PyQt, Kivy, wxPython
+    - Libraries: PySide, PyGTK
+
+10) Game Development
+    - Libraries: Pygame, Panda3D, Arcade, Godot (Python API)
+    - Game Engines: Unity (with Python scripting), Unreal Engine (with Python scripting)
+
+11) Finance
+    - Libraries: QuantLib, PyAlgoTrade, Backtrader, Zipline
+    - Data Analysis: Pandas, NumPy, Matplotlib
+
+12) Robotics / IoT
+    - Libraries: ROS (Robot Operating System), MicroPython, CircuitPython
+    - Hardware: Raspberry Pi, Arduino, ESP32
+
+
+System: re, sys, os, os.path, datetime, time
